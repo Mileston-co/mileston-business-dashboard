@@ -29,7 +29,7 @@ const EmailForm = () => {
     return re.test(String(email).toLowerCase());
   };
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (validateEmail(email)) {
       setError("");
